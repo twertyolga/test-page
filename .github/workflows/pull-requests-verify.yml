@@ -3,9 +3,7 @@ name: Verify pull request
 
 # Runs when someone creates a Git reference (Git branch or tag) in the workflow's repository
 on: 
-  create:
-  # Allows you to run this workflow manually from the Actions tab
-    workflow_dispatch:
+  push
 
 # Allow one concurrent deployment
 concurrency:
