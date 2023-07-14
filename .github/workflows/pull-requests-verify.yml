@@ -1,0 +1,29 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Verify pull request
+
+# Runs when someone creates a Git reference (Git branch or tag) in the workflow's repository
+on: 
+  create:
+  # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'validations'
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn
+      - name: Run linter
+        run: yarn lint
