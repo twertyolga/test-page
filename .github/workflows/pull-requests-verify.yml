@@ -5,6 +5,7 @@ name: Verify pull request
 on: 
   push:
     branches:
+      - '**'
       - '!main'
 
 # Allow one concurrent deployment
