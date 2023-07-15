@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+function AdditionalPage() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>App Page (version {__APP_VERSION__})</h1>
+      <h1>Additional Page (version {__APP_VERSION__})</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -22,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default AdditionalPage
