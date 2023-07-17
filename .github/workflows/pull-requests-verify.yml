@@ -3,7 +3,10 @@ name: Verify pull request
 
 # Runs when someone creates a Git reference (Git branch or tag) in the workflow's repository
 on: 
-  push
+  push:
+    branches:
+      - '**'
+      - '!main'
 
 # Allow one concurrent deployment
 concurrency:
