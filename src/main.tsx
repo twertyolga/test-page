@@ -12,13 +12,13 @@ import './index.css'
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <App/>,
     },
     {
         path: "/test",
         element: <AdditionalPage/>,
-    }
-]);
+    },
+], { basename: "/test-page" });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
