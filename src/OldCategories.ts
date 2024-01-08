@@ -1,4 +1,4 @@
-const OldCategories = [
+export const OldCategories = [
   {
     id: 'g-1',
     title: 'Авиация',
